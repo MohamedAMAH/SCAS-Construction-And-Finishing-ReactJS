@@ -30,7 +30,7 @@ const Team = () => {
           {directors.map((director, index) => (
             <div className={styles.director} key={index}>
               <div className={styles.imageWrapper}>
-                <div className={styles.image} style={{backgroundImage: `url(/src/assets/images/team-${index + 1}.jpg)`}}></div>
+                <div className={styles.image} style={{backgroundImage: `url(/images/team-${index + 1}.jpg)`}}></div>
               </div>
               <div className={styles.info}>
                 <h3 className={styles.name}>{director.name}</h3>

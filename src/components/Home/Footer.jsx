@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.logo}>
-            <img src="/src/assets/images/logos/scas-white.png" alt="SCAS" />
+            <img src="/images/logos/scas-white.png" alt="SCAS" />
           </div>
           
           <div className={styles.links}>

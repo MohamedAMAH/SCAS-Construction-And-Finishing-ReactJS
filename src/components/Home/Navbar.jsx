@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className={styles.logo}>
           <a href="#" aria-label="SCAS Home">
             <img 
-              src={isScrolled ? "/src/assets/images/logos/scas-black.png" : "/src/assets/images/logos/scas-white-down.png"} 
+              src={isScrolled ? "/images/logos/scas-black.png" : "/images/logos/scas-white-down.png"} 
               alt="SCAS" 
               className={styles.logoImage}
             />

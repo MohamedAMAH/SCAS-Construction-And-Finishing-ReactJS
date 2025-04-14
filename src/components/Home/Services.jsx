@@ -58,7 +58,7 @@ const Services = () => {
           </div>
           
           <div className={styles.serviceDisplay}>
-            <div className={styles.serviceImage} style={{backgroundImage: `url(/src/assets/images/${services[activeService].image})`}}>
+            <div className={styles.serviceImage} style={{backgroundImage: `url(/images/${services[activeService].image})`}}>
               <div className={styles.overlay}></div>
             </div>
             <div className={styles.serviceInfo}>

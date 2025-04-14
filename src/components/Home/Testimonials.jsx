@@ -67,7 +67,7 @@ const Testimonials = () => {
                         <p className={styles.clientPosition}>{testimonial.position}</p>
                       </div>
                       <div className={styles.companyLogo}>
-                        <img src={`/src/assets/images/logos/${testimonial.company.toLowerCase().replace(/\s+/g, '-')}.png`} alt={testimonial.company} />
+                        <img src={`/images/logos/${testimonial.company.toLowerCase().replace(/\s+/g, '-')}.png`} alt={testimonial.company} />
                       </div>
                     </div>
                   </div>

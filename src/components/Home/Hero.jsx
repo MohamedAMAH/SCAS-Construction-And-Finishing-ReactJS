@@ -23,7 +23,7 @@ const Hero = () => {
             className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
             aria-hidden={index !== currentSlide}
           >
-            <div className={styles.backgroundImage} style={{backgroundImage: `url(/src/assets/images/hero/${category.toLowerCase()}.jpg)`}}></div>
+            <div className={styles.backgroundImage} style={{backgroundImage: `url(/images/hero/${category.toLowerCase()}.jpg)`}}></div>
           </div>
         ))}
       </div>

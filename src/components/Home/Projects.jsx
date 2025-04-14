@@ -86,7 +86,7 @@ const Projects = () => {
         <div className={styles.grid}>
           {filteredProjects.map(project => (
             <div className={styles.project} key={project.id}>
-              <div className={styles.projectImage} style={{backgroundImage: `url(/src/assets/images/projects/${project.image})`}}>
+              <div className={styles.projectImage} style={{backgroundImage: `url(/images/projects/${project.image})`}}>
                 <div className={styles.overlay}>
                   <div className={styles.projectInfo}>
                     <h3 className={styles.projectName}>{project.name}</h3>
