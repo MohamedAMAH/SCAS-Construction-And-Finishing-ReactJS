@@ -26,7 +26,7 @@ const Projects = () => {
       id: 2,
       name: 'Blooms & Beans Cafe',
       category: 'commercial',
-      image: 'blooms.jpg',
+      image: 'blooms-com.jpg', /* This was changed from "blooms.jpg" to "blooms-com.jpg" because of compression */
       client: 'Blooms & Beans'
     },
     {
