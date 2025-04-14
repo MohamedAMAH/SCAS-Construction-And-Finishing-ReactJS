@@ -13,8 +13,8 @@
   /* Import fonts */
   @font-face {
     font-family: 'Ogg-Regular';
-    src: url('../assets/fonts/Ogg-Regular.woff2') format('woff2'),
-         url('../assets/fonts/Ogg-Regular.woff') format('woff');
+    src: url('/src/assets/fonts/Ogg-Regular.woff2') format('woff2'),
+         url('/src/assets/fonts/Ogg-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -22,8 +22,8 @@
   
   @font-face {
     font-family: 'TWKEverett-Regular';
-    src: url('../assets/fonts/TWKEverett-Regular.woff2') format('woff2'),
-         url('../assets/fonts/TWKEverett-Regular.woff') format('woff');
+    src: url('/src/assets/fonts/TWKEverett-Regular.woff2') format('woff2'),
+         url('/src/assets/fonts/TWKEverett-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -31,8 +31,8 @@
   
   @font-face {
     font-family: 'TWKEverett-Light';
-    src: url('../assets/fonts/TWKEverett-Light.woff2') format('woff2'),
-         url('../assets/fonts/TWKEverett-Light.woff') format('woff');
+    src: url('/src/assets/fonts/TWKEverett-Light.woff2') format('woff2'),
+         url('/src/assets/fonts/TWKEverett-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -40,8 +40,8 @@
   
   @font-face {
     font-family: 'TWKEverett-Bold';
-    src: url('../assets/fonts/TWKEverett-Bold.woff2') format('woff2'),
-         url('../assets/fonts/TWKEverett-Bold.woff') format('woff');
+    src: url('/src/assets/fonts/TWKEverett-Bold.woff2') format('woff2'),
+         url('/src/assets/fonts/TWKEverett-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
