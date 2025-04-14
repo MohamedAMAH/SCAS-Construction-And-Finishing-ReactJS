@@ -18,7 +18,7 @@ const Services = () => {
     {
       name: "Commercial",
       description: "Restaurants & cafes, recreational facilities & retail stores brought to life in an ambiance that is unique to the Egyptian market. We construct detailed interior and exterior finishing works with a close eye on quality.",
-      image: "commercial-com.jpg" /* This was changed from "commercial.jpg" to "commercial-com.jpg" because of compression */
+      image: "commercial.jpg"
     },
     {
       name: "Residential",
