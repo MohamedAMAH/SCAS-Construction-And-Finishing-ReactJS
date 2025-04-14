@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
   
   return {
+    base: '/',
     plugins: [react()],
     
     // Resolve path aliases for cleaner imports
