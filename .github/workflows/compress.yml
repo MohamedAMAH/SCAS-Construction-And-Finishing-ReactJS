@@ -1,0 +1,94 @@
+name: Compress Videos
+
+on:
+  push:
+    branches: [main]  # Adjust this to match your main branch name
+
+jobs:
+  compress-videos:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install opencv-python scikit-image numpy
+          
+      - name: Check if videos directory exists
+        id: check_videos_dir
+        run: |
+          if [ -d "public/videos" ]; then
+            echo "videos_dir_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "videos_dir_exists=false" >> $GITHUB_OUTPUT
+            echo "Error: public/videos directory does not exist"
+            exit 1
+          fi
+          
+      - name: Check if compression script exists
+        id: check_script
+        if: steps.check_videos_dir.outputs.videos_dir_exists == 'true'
+        run: |
+          if [ -f "public/videos/compress_videos.py" ]; then
+            echo "script_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "script_exists=false" >> $GITHUB_OUTPUT
+            echo "Error: compress_videos.py script not found in public/videos"
+            exit 1
+          fi
+          
+      - name: Create output directory in public/videos
+        if: steps.check_script.outputs.script_exists == 'true'
+        run: |
+          # Create compressed_videos directory if it doesn't exist
+          mkdir -p public/videos/compressed_videos
+          
+          # Clear it if it already has files
+          if [ -d "public/videos/compressed_videos" ] && [ "$(ls -A public/videos/compressed_videos)" ]; then
+            rm -rf public/videos/compressed_videos/*
+            echo "Cleared existing compressed_videos directory"
+          fi
+          
+      - name: Run video compression script
+        if: steps.check_script.outputs.script_exists == 'true'
+        working-directory: public/videos
+        run: |
+          # Run the compression script from within the videos directory
+          python compress_videos.py
+          
+      - name: Check for compressed videos
+        id: check_output
+        run: |
+          if [ -d "public/videos/compressed_videos" ] && [ "$(ls -A public/videos/compressed_videos)" ]; then
+            echo "compressed_videos_exist=true" >> $GITHUB_OUTPUT
+          else
+            echo "compressed_videos_exist=false" >> $GITHUB_OUTPUT
+            echo "No compressed videos were generated"
+          fi
+          
+      - name: Create ZIP file of compressed videos
+        if: steps.check_output.outputs.compressed_videos_exist == 'true'
+        run: |
+          cd public/videos
+          zip -r ../../compressed_videos.zip compressed_videos
+          
+      - name: Upload compressed videos as artifact
+        if: steps.check_output.outputs.compressed_videos_exist == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: compressed-videos
+          path: compressed_videos.zip
+          retention-days: 7
