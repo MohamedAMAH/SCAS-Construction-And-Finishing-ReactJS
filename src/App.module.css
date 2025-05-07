@@ -7,3 +7,24 @@ flex-direction: column;
 .content {
 flex: 1 0 auto;
 }
+
+/* Common section styles that appear across multiple pages */
+/* .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+} */
+
+/* Common heading styles that might be used across pages */
+.pageTitle {
+font-family: 'Ogg-Regular', serif;
+font-size: 3rem;
+color: #212322;
+margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+font-family: 'TWKEverett-Regular', sans-serif;
+font-size: 1.2rem;
+color: #666;
+}

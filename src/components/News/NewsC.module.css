@@ -1,0 +1,175 @@
+.newsContainer {
+  padding: 6rem 0 0;
+  background-color: #F5F5F5;
+}
+
+.title {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 3rem;
+  color: #212322;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #212322;
+}
+
+.subtitle {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #3A3A3A;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.newsletterCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletterCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.newsletterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.newsletterCard:hover .newsletterImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.date {
+  display: inline-block;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1.5rem;
+  color: #212322;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.downloadLink {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 0.875rem;
+  color: #212322;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #212322;
+  transition: padding-bottom 0.3s ease;
+}
+
+.downloadLink:hover {
+  padding-bottom: 6px;
+}
+
+.downloadLink svg {
+  margin-left: 6px;
+}
+
+/* Subscribe section */
+.subscribeSection {
+  background-color: #F5F5F5;
+  padding: 6rem 0;
+}
+
+.subscribeTitle {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #212322;
+  position: relative;
+}
+
+.subscribeTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #212322;
+}
+
+.subscribeText {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 2rem auto 2.5rem;
+  color: #3A3A3A;
+}
+
+.subscribeForm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.subscribeButton {
+  background-color: #212322;
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribeButton:hover {
+  background-color: #3a3a3a;
+}

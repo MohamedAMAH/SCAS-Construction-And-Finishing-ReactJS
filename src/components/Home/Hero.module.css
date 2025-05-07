@@ -1,110 +1,180 @@
 .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    color: white;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 35, 34, 0.5);
-    z-index: 1;
-  }
-  
-  .slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.slideContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.title {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.subtitle {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.7s;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: #fff;
+  color: #212322;
+  border: 2px solid #fff;
+}
+
+.primaryButton:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+@keyframes fadeUp {
+  from {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: translateY(20px);
   }
-  
-  .slide.active {
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
-  
-  .backgroundImage {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
+}
+
+@media (max-width: 968px) {
   .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 2;
     padding: 0 2rem;
-    text-align: center;
   }
   
   .title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 0;
-    font-family: 'Ogg-Regular', serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 3rem;
   }
   
   .subtitle {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    font-family: 'TWKEverett-Light', sans-serif;
-    max-width: 600px;
+    font-size: 1.25rem;
   }
   
-  .categories {
-    display: flex;
-    gap: 1.5rem;
+  .actions {
+    flex-direction: column;
   }
   
-  .categoryButton {
-    background: none;
-    border: 1px solid white;
-    padding: 0.5rem 1.5rem;
-    color: white;
-    font-family: 'TWKEverett-Regular', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
   }
-  
-  .categoryButton:hover, .activeCat {
-    background-color: white;
-    color: #212322;
-  }
-  
-  @media (max-width: 768px) {
-    .title {
-      font-size: 3rem;
-    }
-    
-    .categories {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
+}

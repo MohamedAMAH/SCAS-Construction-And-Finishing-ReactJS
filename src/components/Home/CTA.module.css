@@ -1,0 +1,77 @@
+.cta {
+  padding: 6rem 2rem;
+  background-color: #212322;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.title {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 200px;
+  text-align: center;
+}
+
+.primaryButton {
+  background-color: #FFFFFF;
+  color: #212322;
+  border: 2px solid #FFFFFF;
+}
+
+.primaryButton:hover {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

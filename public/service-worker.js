@@ -3,8 +3,8 @@ const SCAS_CACHE = 'scas-cache';
 
 // Basic files to cache immediately
 const CORE_FILES = [
-  '/',
-  '/index.html'
+  // '/',
+  // '/index.html'
 ];
 
 // When service worker is installed
