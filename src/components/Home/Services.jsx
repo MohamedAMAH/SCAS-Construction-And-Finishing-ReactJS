@@ -21,7 +21,7 @@ const Services = () => {
       id: 'commercial',
       title: 'Commercial',
       description: 'Restaurants & cafes, recreational facilities & retail stores brought to life in a unique ambiance. We construct detailed interior and exterior finishing works with a close eye on quality.',
-      image: '/images/projects/blooms-new.jpg'
+      image: '/images/projects/blooms-new.webp'
     },
     {
       id: 'residential',
