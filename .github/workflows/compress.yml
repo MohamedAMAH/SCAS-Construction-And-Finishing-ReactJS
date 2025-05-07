@@ -87,7 +87,7 @@ jobs:
           
       - name: Upload compressed videos as artifact
         if: steps.check_output.outputs.compressed_videos_exist == 'true'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: compressed-videos
           path: compressed_videos.zip
