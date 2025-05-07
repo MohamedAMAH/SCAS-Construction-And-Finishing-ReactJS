@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import News from './pages/News/News';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

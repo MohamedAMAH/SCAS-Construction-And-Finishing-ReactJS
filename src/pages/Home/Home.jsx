@@ -14,7 +14,6 @@ const Home = () => {
       <FAF />
       <Services />
       <CTA />
-      {/* <NewsC /> */}
     </div>
   );
 };
