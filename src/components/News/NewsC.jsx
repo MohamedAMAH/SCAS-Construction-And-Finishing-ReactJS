@@ -9,28 +9,28 @@ const NewsC = () => {
       id: 1,
       title: 'SCAS Completes Conrad Hotel Renovation',
       date: 'May 15, 2025',
-      image: '/images/projects/conrad.jpg',
+      image: '/images/projects/conrad-new.webp',
       pdfUrl: '/Newsletter/April \'25 Newsletter.pdf'
     },
     {
       id: 2,
       title: 'New Corporate Office Project with Knauf',
       date: 'April 22, 2025',
-      image: '/images/projects/knauf.jpg',
+      image: '/images/projects/knauf-new.webp',
       pdfUrl: '/Newsletter/March \'25.pdf'
     },
     {
       id: 3,
       title: 'Expansion of Services in Commercial Sector',
       date: 'March 10, 2025',
-      image: '/images/projects/blooms-com.jpg',
+      image: '/images/projects/blooms-new.webp',
       pdfUrl: '/Newsletter/Febraury 2025 Newsletter.pdf'
     },
     {
       id: 4,
       title: 'Residential Projects Overview for Q1',
       date: 'February 5, 2025',
-      image: '/images/projects/hacienda.jpg',
+      image: '/images/projects/hacienda-new.webp',
       pdfUrl: '/Newsletter/Janurary 2025.pdf'
     }
   ];
