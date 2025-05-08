@@ -9,25 +9,25 @@ const Services = () => {
       id: 'corporate',
       title: 'Corporate',
       description: 'Covering head offices and the banking industry. We ensure a comfortable and productive working environment is delivered, working with both prominent local and multinational organizations.',
-      image: '/images/hero/corporate.jpg'
+      image: '/images/hero/corporate-new.webp'
     },
     {
       id: 'hospitality',
       title: 'Hospitality',
       description: 'Hotels & resort industry including all associated amenities executed to give our clients a touch of sophisticated finishing, detailed fitouts & the latest architectural atmosphere.',
-      image: '/images/hero/hospitality.jpg'
+      image: '/images/hero/hospitality-new.webp'
     },
     {
       id: 'commercial',
       title: 'Commercial',
       description: 'Restaurants & cafes, recreational facilities & retail stores brought to life in a unique ambiance. We construct detailed interior and exterior finishing works with a close eye on quality.',
-      image: '/images/projects/blooms-new.webp'
+      image: '/images/hero/commercial-new.webp'
     },
     {
       id: 'residential',
       title: 'Residential',
       description: 'Renowned spaces known for luxurious touch and impeccable craftsmanship, combining both style & class. Covering residential compounds, buildings, private apartments & summerhouses.',
-      image: '/images/hero/residential.jpg'
+      image: '/images/hero/residential-new.webp'
     }
   ];
 

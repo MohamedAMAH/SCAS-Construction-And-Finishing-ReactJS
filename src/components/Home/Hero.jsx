@@ -7,19 +7,19 @@ const Hero = () => {
   const slides = [
     {
       id: 1,
-      image: '/images/projects/conrad.jpg',
+      image: '/images/projects/conrad-new.webp',
       title: 'Crafting Excellence',
       subtitle: 'Innovative Construction & Premium Finishing'
     },
     {
       id: 2,
-      image: '/images/projects/knauf.jpg',
+      image: '/images/projects/knauf-new.webp',
       title: 'Building Dreams',
       subtitle: 'Turning Visions into Reality'
     },
     {
       id: 3,
-      image: '/images/projects/blooms-com.jpg',
+      image: '/images/projects/blooms-new.webp',
       title: 'Quality in Every Detail',
       subtitle: 'Excellence in Construction Since 2010'
     }
