@@ -24,11 +24,11 @@ self.addEventListener('fetch', (event) => {
   // Only process GET requests
   if (event.request.method !== 'GET') return;
   
-  // Check if this is an image request
-  const isImage = event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/);
+  // Check if this is an image or video request
+  const isMediaFile = event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp|mp4|mov)$/);
   
-  // Only cache images and core files
-  if (isImage || CORE_FILES.includes(new URL(event.request.url).pathname)) {
+  // Only cache media files and core files
+  if (isMediaFile || CORE_FILES.includes(new URL(event.request.url).pathname)) {
     event.respondWith(
       // First, try to find it in the cache
       caches.match(event.request)
