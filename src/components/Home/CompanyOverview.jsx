@@ -29,6 +29,26 @@ const CompanyOverview = () => {
     }
   };
 
+  // Add this new effect to preload the video when the component mounts
+  useEffect(() => {
+    if (videoRef.current) {
+      // Set preload to 'auto' to start loading the entire video
+      videoRef.current.preload = 'auto';
+      
+      // Start loading the video
+      videoRef.current.load();
+      
+      // Optional: Prefetch a small portion of the video
+      if ('prefetch' in HTMLLinkElement.prototype) {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = '/videos/Conrad part 1_Final.mp4';
+        link.as = 'video';
+        document.head.appendChild(link);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     const options = {
       root: null, 
@@ -95,7 +115,7 @@ const CompanyOverview = () => {
                 className={styles.video}
                 src="/videos/Conrad part 1_Final.mp4" 
                 poster="/images/video-thumbnail.jpg"
-                preload="metadata"
+                preload="auto"
                 muted
                 playsInline
                 onClick={handleVideoToggle}

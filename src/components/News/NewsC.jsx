@@ -45,7 +45,7 @@ const NewsC = () => {
   return (
     <section className={styles.newsContainer}>
       <div className="container">
-        <div className="row mb-5">
+        <div className="row mb-4">
           <div className="col-lg-12 text-center">
             <h1 className={styles.title}>Company Updates</h1>
             <p className={styles.subtitle}>
