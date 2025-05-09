@@ -1,0 +1,228 @@
+.processTimeline {
+  padding: 6rem 0;
+  background-color: #212322;
+  color: white;
+}
+
+.sectionTitle {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 2.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionSubtitle {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 4rem;
+}
+
+.timelineContainer {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.timelineProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 6);
+  padding: 0 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.step:hover {
+  opacity: 0.8;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.completed .stepNumber span {
+  background-color: white;
+  color: #212322;
+}
+
+.stepNumber {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.stepNumber span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.step.active .stepNumber span {
+  background-color: white;
+  color: #212322;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.stepInfo {
+  text-align: center;
+  max-width: 150px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.step.active .stepInfo {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s ease;
+}
+
+.stepTitle {
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* Step Detail Section */
+.stepDetail {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.stepDetailInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stepDetailNumber {
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1.5rem;
+  background-color: white;
+  color: #212322;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.stepDetailTitle {
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.stepDetailDescription {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .stepsContainer {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .step {
+    min-width: 120px;
+    scroll-snap-align: center;
+  }
+  
+  .stepNumber span {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .timelineLine {
+    top: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stepsContainer {
+    justify-content: flex-start;
+  }
+  
+  .step {
+    min-width: 100px;
+  }
+  
+  .stepDetail {
+    padding: 1.5rem;
+  }
+  
+  .stepDetailNumber {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .stepDetailTitle {
+    font-size: 1.25rem;
+  }
+  
+  .stepDetailDescription {
+    font-size: 1rem;
+  }
+}

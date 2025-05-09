@@ -1,0 +1,203 @@
+.testimonialSection {
+  padding: 6rem 0;
+  background-color: #F5F5F5;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-family: 'Ogg-Regular', serif;
+  font-size: 2.5rem;
+  color: #212322;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #212322;
+}
+
+.testimonialRow {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 360px;
+  margin-bottom: 2rem;
+}
+
+.testimonialCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease, opacity 0.7s ease, box-shadow 0.3s ease;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.testimonialCard.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.cardHeader {
+  padding: 2rem 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.clientLogo {
+  max-width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientLogo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cardBody {
+  flex: 1;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.quoteText {
+  font-family: 'TWKEverett-Regular', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #212322;
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+}
+
+.quoteText::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  width: 80px;
+  height: 60px;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='60' viewBox='0 0 80 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 10H20C19.53 10 19.2 9.32 19.47 8.92L34.73 2.59C35.2 2.04 34.61 1 33.6 1H23.6C23.25 1 22.92 1.19 22.71 1.5L5.05 28.52C4.84 28.83 4.84 29.24 5.06 29.54L15.09 44.58C15.3 44.89 15.63 45.08 16 45.08H31.6C32.39 45.08 33.07 44.42 33.07 43.58V12C33.07 10.9 33.78 10 34 10Z' fill='%23f5f5f5'/%3E%3Cpath d='M74 10H60C59.53 10 59.2 9.32 59.47 8.92L74.73 2.59C75.2 2.04 74.61 1 73.6 1H63.6C63.25 1 62.92 1.19 62.71 1.5L45.05 28.52C44.84 28.83 44.84 29.24 45.06 29.54L55.09 44.58C55.3 44.89 55.63 45.08 56 45.08H71.6C72.39 45.08 73.07 44.42 73.07 43.58V12C73.07 10.9 73.78 10 74 10Z' fill='%23f5f5f5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.cardFooter {
+  padding: 0 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cardFooter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #f0f0f0;
+}
+
+.clientInfo {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.clientName {
+  font-family: 'TWKEverett-Bold', sans-serif;
+  font-size: 1rem;
+  color: #212322;
+  margin-bottom: 0.25rem;
+}
+
+.clientTitle {
+  font-family: 'TWKEverett-Light', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #dedede;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #212322;
+  transform: scale(1.2);
+}
+
+.backgroundPattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: linear-gradient(to bottom, transparent 80%, #f0f0f0 100%), 
+                    radial-gradient(circle at 20% 80%, #eaeaea 0%, transparent 10%),
+                    radial-gradient(circle at 80% 10%, #eaeaea 0%, transparent 10%);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .testimonialRow {
+    height: 450px;
+  }
+  
+  .cardBody {
+    padding: 1rem 1.5rem;
+  }
+  
+  .quoteText {
+    font-size: 1.1rem;
+  }
+  
+  .quoteText::before {
+    top: -10px;
+    left: -20px;
+    width: 40px;
+    height: 30px;
+  }
+}

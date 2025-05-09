@@ -64,9 +64,6 @@ const CompanyOverview = () => {
             videoRef.current.play()
               .then(() => {
                 setIsPlaying(true);
-              })
-              .catch(e => {
-                console.error('Autoplay failed:', e);
               });
           }
         } else {
