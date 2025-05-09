@@ -4,7 +4,7 @@ import styles from './CompanyOverview.module.css';
 const CompanyOverview = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef(null);
   const videoContainerRef = useRef(null);
 
@@ -116,7 +116,6 @@ const CompanyOverview = () => {
                 src="/videos/Conrad part 1_Final.mp4" 
                 poster="/images/video-thumbnail.jpg"
                 preload="auto"
-                muted
                 playsInline
                 onClick={handleVideoToggle}
               />
