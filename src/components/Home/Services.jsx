@@ -64,7 +64,7 @@ const Services = () => {
                 {services.find(s => s.id === activeTab).description}
               </p>
               <a href={`/services/${activeTab}`} className={styles.viewProjectsLink}>
-                View Projects
+                <span>View Projects</span>
               </a>
             </div>
           </div>

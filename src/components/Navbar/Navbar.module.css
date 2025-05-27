@@ -11,7 +11,7 @@
 
 .header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.75rem 0;
+  /* padding: 0.75rem 0; */
 }
 
 .navbar {
@@ -36,9 +36,9 @@
   transition: height 0.3s ease;
 }
 
-.scrolled .logoImage {
+/* .scrolled .logoImage {
   height: 35px;
-}
+} */
 
 .desktopNav {
   display: flex;
@@ -83,8 +83,6 @@
 .navLink.active::after {
   width: 100%;
 }
-
-
 
 /* Mobile Menu Button */
 .mobileMenuButton {

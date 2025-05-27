@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className={styles.logoContainer}>
             <Link to="/" className={styles.logo}>
               <img 
-                src="/images/logos/scas-black.png" 
+                src="/images/logos/scas-black.png"
                 alt="SCAS Construction & Finishing" 
                 className={styles.logoImage}
               />

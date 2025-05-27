@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Eye, FileText } from 'lucide-react';
 import styles from './NewsC.module.css';
 
 const NewsC = () => {
@@ -7,30 +8,26 @@ const NewsC = () => {
   const newsletters = [
     {
       id: 1,
-      title: 'SCAS Completes Conrad Hotel Renovation',
+      title: 'Conrad Hotel',
       date: 'May 15, 2025',
-      image: '/images/projects/conrad-new.webp',
       pdfUrl: '/Newsletter/April \'25 Newsletter.pdf'
     },
     {
       id: 2,
-      title: 'New Corporate Office Project with Knauf',
+      title: 'Knauf Office Development',
       date: 'April 22, 2025',
-      image: '/images/projects/knauf-new.webp',
       pdfUrl: '/Newsletter/March \'25.pdf'
     },
     {
       id: 3,
-      title: 'Expansion of Services in Commercial Sector',
+      title: 'Commercial Division Growth',
       date: 'March 10, 2025',
-      image: '/images/projects/blooms-new.webp',
       pdfUrl: '/Newsletter/Febraury 2025 Newsletter.pdf'
     },
     {
       id: 4,
-      title: 'Residential Projects Overview for Q1',
+      title: 'Q1 Residential Update',
       date: 'February 5, 2025',
-      image: '/images/projects/hacienda-new.webp',
       pdfUrl: '/Newsletter/Janurary 2025.pdf'
     }
   ];
@@ -47,7 +44,14 @@ const NewsC = () => {
       <div className="container">
         <div className="row mb-4">
           <div className="col-lg-12 text-center">
-            <h1 className={styles.title}>Company Updates</h1>
+            <div className={styles.titleContainer}>
+              <img 
+                src="/Website Material/SCAS Brand Identity/Graphic Elements/SCAS_Buildings_Dark Grey.png"
+                alt=""
+                className={styles.graphicElement}
+              />
+              <h1 className={styles.title}>Company Updates</h1>
+            </div>
             <p className={styles.subtitle}>
               Stay informed about our latest projects, achievements, and industry insights.
               Our monthly newsletters provide valuable information about the construction and finishing industry.
@@ -62,11 +66,8 @@ const NewsC = () => {
                 <div key={newsletter.id} className="col-md-6">
                   <div className={styles.newsletterCard}>
                     <div className={styles.imageContainer}>
-                      <img 
-                        src={newsletter.image} 
-                        alt={newsletter.title} 
-                        className={styles.newsletterImage}
-                      />
+                      <span className={styles.pdfWatermark}>PDF</span>
+                      <FileText size={64} className={styles.pdfIcon} />
                     </div>
                     <div className={styles.cardContent}>
                       <span className={styles.date}>{newsletter.date}</span>
@@ -77,10 +78,7 @@ const NewsC = () => {
                         className={styles.downloadLink}
                       >
                         <span>View PDF</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
+                        <Eye size={16} />
                       </a>
                     </div>
                   </div>
@@ -95,7 +93,14 @@ const NewsC = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
-              <h2 className={styles.subscribeTitle}>Subscribe to Our Newsletter</h2>
+              <div className={styles.subscribeTitleContainer}>
+                <img 
+                  src="/Website Material/SCAS Brand Identity/Graphic Elements/SCAS_Hospitality_Dark Grey.png"
+                  alt=""
+                  className={styles.subscribeGraphic}
+                />
+                <h2 className={styles.subscribeTitle}>Subscribe to Our Newsletter</h2>
+              </div>
               <p className={styles.subscribeText}>
                 Receive monthly updates on our latest projects, industry trends, and company news.
               </p>

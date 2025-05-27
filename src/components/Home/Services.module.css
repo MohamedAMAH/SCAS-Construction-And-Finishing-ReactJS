@@ -73,20 +73,31 @@
 }
 
 .viewProjectsLink {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: 'TWKEverett-Regular', sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #212322;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #212322;
   text-decoration: none;
   transition: all 0.3s ease;
+  gap: 8px;
+}
+
+.viewProjectsLink::after {
+  content: '→';
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 .viewProjectsLink:hover {
-  padding-bottom: 8px;
+  color: #3A3A3A;
+}
+
+.viewProjectsLink:hover::after {
+  transform: translateX(8px);
 }
 
 .serviceImageContainer {

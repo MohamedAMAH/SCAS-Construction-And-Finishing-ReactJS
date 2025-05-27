@@ -1,5 +1,6 @@
 import styles from './Home.module.css';
 import Hero from '../../components/Home/Hero';
+import HeroV from '../../components/HeroV/HeroV';
 import CompanyOverview from '../../components/Home/CompanyOverview';
 import CTA from '../../components/Home/CTA';
 import FAF from '../../components/Home/FAF';
@@ -11,9 +12,10 @@ import PT from '../../components/Home/PT';
 const Home = () => {
   return (
     <div className={styles.home}>
-      <Hero />
-      <CompanyOverview />
-      <PT />
+      {/* <Hero /> */}
+      <HeroV />
+      {/* <CompanyOverview />
+      <PT /> */}
       {/* <FB /> */}
       <Services />
       <FAF />
